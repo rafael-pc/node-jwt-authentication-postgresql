@@ -11,7 +11,9 @@ const app = express();
 const port = process.env.PORT;
 
 var corsOptions = {
-  origin: process.env.CORS_ORIGIN
+  origin: 'http://127.0.0.1:5174',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'x-access-token'],
 };
 
 app.use(cors(corsOptions));
